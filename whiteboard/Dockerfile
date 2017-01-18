@@ -9,6 +9,7 @@ RUN npm install
 #copy across source
 COPY . /usr/src/app
 
-EXPOSE 8080
+ENV PORT 9000
+ENV HOSTNAME "0.0.0.0"
 
-CMD [ "node", "app.js" ]
+ENTRYPOINT node app.js $HOSTNAME $PORT
