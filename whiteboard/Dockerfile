@@ -9,7 +9,7 @@ RUN npm install
 #copy across source
 COPY . /usr/src/app
 
-EXPOSE 8080
+EXPOSE 4001
 ENV HOSTNAME "0.0.0.0"
 
 ENTRYPOINT node app.js $HOSTNAME
